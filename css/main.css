@@ -2014,6 +2014,7 @@ h6 {
 .single-deal {
   position: relative;
   margin-bottom: 30px;
+
 }
 
 .single-deal .overlay {
@@ -2031,12 +2032,17 @@ h6 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.single-deal .img4{
+  max-width: 200px;
+  max-height: 200px;
+}
 
 .single-deal .deal-details {
   position: absolute;
   left: 50%;
   top: 115%;
   display: inline-block;
+  
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -8127,15 +8133,28 @@ label {
 ============================================================================================ */
 .footer-area {
   padding-top: 100px;
-  background-color: #222222;
+  background-color: #222;
 }
 
 .footer-area h6 {
-  color: #fff;
+  color: #febe10;
   margin-bottom: 25px;
   font-size: 18px;
   font-weight: 600;
 }
+.footer-area .single-footer-widget .contact  {
+  color: #fff;
+}
+.footer-area .single-footer-widget .contact:hover  {
+  color:  #e75813;
+}
+.footer-area .single-footer-widget .introduct  {
+  color: #fff;
+}
+.footer-area .single-footer-widget .introduct:hover  {
+  color:  #e75813;
+}
+
 
 @media (max-width: 767px) {
   .footer-area h6 {
@@ -8162,6 +8181,8 @@ label {
 }
 
 .footer-social a {
+  font-size: 20px;
+  margin-bottom:20px;
   padding-right: 25px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -8171,6 +8192,12 @@ label {
 
 .footer-social a:hover i {
   color: #ffba00;
+}
+.footer-social .logo img{
+  transition: all 0.5s ease-out;
+}
+.footer-social .logo img:hover {
+  transform: scale(1.23)
 }
 
 .footer-social i {
@@ -8192,24 +8219,8 @@ label {
   width: 100%;
 }
 
-.single-footer-widget input {
-  border: none;
-  width: 80% !important;
-  font-weight: 300;
-  background: #fff;
-  color: #777;
-  padding-left: 20px;
-  border-radius: 0;
-  font-size: 14px;
-}
-
-.single-footer-widget input:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.single-footer-widget input.placeholder {
-  color: #ccc;
+.single-footer-widget #contact p {
+  color:#fff !important
 }
 
 .single-footer-widget input:-moz-placeholder {
@@ -8682,7 +8693,7 @@ label {
   color: #ff6347;
 }
 
-.nav-pills>li[data-slide-to="0"].active a small {
+.nav-pills>li[data-slide-to="0"].active a  {
   color: #ff6347;
 }
 
@@ -8690,7 +8701,7 @@ label {
   color: #ff6347;
 }
 
-.nav-pills>li[data-slide-to="1"].active a small {
+.nav-pills>li[data-slide-to="1"].active a  {
   color: #ff6347;
 }
 
@@ -8698,7 +8709,7 @@ label {
   color: #ff6347;
 }
 
-.nav-pills>li[data-slide-to="2"].active a small {
+.nav-pills>li[data-slide-to="2"].active a  {
   color: #ff6347;
 }
 
@@ -8706,13 +8717,14 @@ label {
   color: #ff6347;
 }
 
-.nav-pills>li[data-slide-to="3"].active a small {
+.nav-pills>li[data-slide-to="3"].active a  {
   color: #ff6347;
 }
 
 /* css banner */
 .sidebar {
-  margin-top: 50px;
+  line-height: 23px;
+  margin-top: 40px;
   background-color: #f8f9fa;
   border: 1px solid #ddd;
   box-shadow: inset #000;
@@ -8745,6 +8757,16 @@ label {
 
 /* ------------------ sidebar-r--------------------- */
 
+.sidebar-r{
+  margin-top: 42px;
+  padding: 0;
+  line-height: 100px;
+}
+.sidebar-r div{
+  margin: 0;
+  padding: 0;
+
+}
 .sidebar-r img {
   height: 100px;
   width: 100%;
@@ -8851,7 +8873,14 @@ label {
   font-weight: 500;
   margin: 0 0 10px;
 }
-
+@media (max-width: 767px) { /* Media query cho màn hình có chiều rộng nhỏ hơn hoặc bằng 767px (mobile) */
+  .product-grid .price {
+    font-size: 12px; /* Kích thước chữ trên màn hình mobile */
+  }
+}
+/* .product-grid .title{
+  text-align: left;
+} */
 .product-grid .price span {
   color: #999;
   font-weight: 400;
@@ -8885,4 +8914,24 @@ label {
   .product-grid {
     margin-bottom: 30px;
   }
+}
+
+/* ---------------multi banner ---------------*/
+.wide-container {
+  display: flex;
+  justify-content: space-around ;
+  margin-bottom:20px
+
+}
+.small {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 25%;
+  float: left;
+ 
+}
+.small img {
+  width: 100%;
+  height: auto;
+
 }

@@ -107,7 +107,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="nav-item">
-                <button class="search">
+                <button type="button" class="search">
                   <span class="lnr lnr-magnifier" id="search"></span>
                 </button>
               </li>
@@ -131,7 +131,7 @@
   <!-- start banner Area -->
   <section class="banner-area">
     <div class="container">
-      <div class="row fullscreen no-gutter align-items-center">
+      <div class="row no-gutter align-items-center" style="margin-top: 100px;">
         <div class="col-md-2 d-none d-md-block sidebar">
           <ul>
             <li><a href="#">Sửa Điện Thoại</a></li>
@@ -182,33 +182,35 @@
               <!-- End Item -->
             </div>
             <!-- End Carousel Inner -->
-            <ul class="nav nav-pills nav-justified  "
+            <ul class="nav nav-pills nav-justified d-none d-md-flex"
               style="display: flex; justify-content: space-around; text-align: center;">
               <li data-target="#myCarousel" data-slide-to="0" class="active col-12 col-md-3">
-                <a href="#">Sửa chữa<small> - Đổi mới AirPods giảm giá 50%</small></a>
+                <a class="content-slide">Sửa chữa - Đổi mới AirPods giảm giá 50%</a>
               </li>
               <li data-target="#myCarousel" data-slide-to="1" class="col-12 col-md-3">
-                <a href="#">Projects<small>Lorem ipsum dolor sit</small></a>
+                <a class="content-slide">Sửa chữa - Đổi mới AirPods giảm giá 50%</a>
               </li>
               <li data-target="#myCarousel" data-slide-to="2" class="col-12 col-md-3">
-                <a href="#">Portfolio<small>Lorem ipsum dolor sit</small></a>
+                <a class="content-slide">Mừng mùa tựu trường "MỚI"  - Thay màn hình giảm 50%</a>
               </li>
               <li data-target="#myCarousel" data-slide-to="3" class="col-12 col-md-3">
-                <a href="#">Services<small>Lorem ipsum dolor sit</small></a>
+                <a class="content-slide">Mừng mùa tựu trường "MỚI" - Thay pin giảm 60%</a>
               </li>
             </ul>
           </div>
           <!-- End Carousel -->
         </div>
-        <div class="col-md-3 sidebar-r">
-          <div class="col">
-            <img src="img/banner/img-apple.jpg" alt="" />
-          </div>
-          <div class="col">
-            <img src="img/banner/bannermaucugiarehome.png" alt="" />
-          </div>
-          <div class="col">
-            <img src="img/banner/samsung.png" alt="" />
+        <div class="col-md-3 d-none d-md-block sidebar-r">
+          <div class="">
+            <div class="col">
+              <img src="img/banner/img-apple.jpg" alt="" />
+            </div>
+            <div class="col">
+              <img src="img/banner/bannermaucugiarehome.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="img/banner/samsung.png" alt="" />
+            </div>
           </div>
         </div>
         <!-- <div class="col-lg-12 mt-5">
@@ -280,7 +282,7 @@
     <div class="container">
       <div class="row features-inner">
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img src="img/pngtree-new-iphone-emoticons-mascot-icon-png-image_4650856.png" alt="" />
@@ -289,7 +291,7 @@
           </div>
         </div>
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img src="img/applewatchlogopng.png" alt="" />
@@ -298,7 +300,7 @@
           </div>
         </div>
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img src="img/ipadtablet-116043_115993.png" alt="" />
@@ -307,7 +309,7 @@
           </div>
         </div>
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img src="img/laptop.png" alt="" />
@@ -316,7 +318,7 @@
           </div>
         </div>
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img src="https://bachlongcare.com/wp-content/uploads/2023/03/icon-sua-airpods.png" alt="" />
@@ -325,7 +327,7 @@
           </div>
         </div>
         <!-- single features -->
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <div class="single-features">
             <div class="f-icon">
               <img
@@ -339,74 +341,6 @@
     </div>
   </section>
   <!-- end features Area -->
-
-  <!-- Start category Area -->
-  <section class="category-area">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-12">
-          <div class="row">
-            <div class="col-lg-8 col-md-8">
-              <div class="single-deal">
-                <div class="overlay"></div>
-                <img class="img-fluid w-100" src="img/category/070824-BANNER-THAYCAP-SS-1200.jpg" alt="" />
-                <a href="img/category/070824-BANNER-THAYCAP-SS-1200.jpg" class="img-pop-up" target="_blank">
-                  <div class="deal-details">
-                    <h6 class="deal-title">Xem chi tiết</h6>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <div class="single-deal">
-                <div class="overlay"></div>
-                <img class="img-fluid w-100" src="img/category/man-hinh-orizin-olip-gx-12-pro-max-new.png" alt="" />
-                <a href="img/category/man-hinh-orizin-olip-gx-12-pro-max-new.png" class="img-pop-up" target="_blank">
-                  <div class="deal-details">
-                    <h6 class="deal-title">Xem chi tiết</h6>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <div class="single-deal">
-                <div class="overlay"></div>
-                <img class="img-fluid w-100" src="img/category/man-hinh-orizin-olip-gx-12-pro-max-new.png" alt="" />
-                <a href="img/category/man-hinh-orizin-olip-gx-12-pro-max-new.png" class="img-pop-up" target="_blank">
-                  <div class="deal-details">
-                    <h6 class="deal-title">Product for Couple</h6>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-8">
-              <div class="single-deal">
-                <div class="overlay"></div>
-                <img class="img-fluid w-100" src="img/category/BANNER-THAYPIN-PISEN-T8-1200-020824-FINAL.png" alt="" />
-                <a href="img/category/BANNER-THAYPIN-PISEN-T8-1200-020824-FINAL.png" class="img-pop-up" target="_blank">
-                  <div class="deal-details">
-                    <h6 class="deal-title">Xem chi tiết</h6>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-deal">
-            <div class="overlay"></div>
-            <img class="img-fluid w-100" src="img/category/images.jpg" alt="" />
-            <a href="img/category/images.jpg" class="img-pop-up" target="_blank">
-              <div class="deal-details">
-                <h6 class="deal-title">Xem chi tiết</h6>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End category Area -->
 
   <!-- start product Area -->
   <section class="owl-carousel active-product-area section_gap">
@@ -425,7 +359,7 @@
         </div>
         <div class="row">
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -451,7 +385,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -477,7 +411,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -503,7 +437,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -529,7 +463,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -555,7 +489,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -581,7 +515,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -607,7 +541,7 @@
           <!-- end single product -->
 
           <!-- start single product -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-6">
             <div class="product-grid">
               <div class="product-image">
                 <a href="#" class="image">
@@ -1312,6 +1246,26 @@
     </div>
   </section>
   <!-- end product Area -->
+
+
+  <!-- Start Multi banner -->
+  <div class="wide-container">
+    <div class="small">
+      <img src="http://placehold.it/1000x500/222">
+    </div>
+    <div class="small">
+      <img src="http://placehold.it/1000x500/222">
+    </div>
+    <div class="small">
+      <img src="http://placehold.it/1000x500/222">
+    </div>
+    <div class="small">
+      <img src="http://placehold.it/1000x500/222">
+    </div>
+  </div>
+  <!-- End Multi banner -->
+
+
 
   <!-- Start exclusive deal Area -->
   <div class="tr-job-posted section-padding">
@@ -2840,27 +2794,6 @@
   </section>
   <!-- End brand Area -->
 
-  <!-- Start related-product Area -->
-  <!-- <section class="related-product-area section_gap_bottom">
-		<div class="row">
-			<div class="col-md-6 col-lg-4 column">
-				<div class="card gr-1">
-				  <div class="txt">
-					<h1>BRANDING AND </br>
-		  			CORPORATE DESIGN</h1>
-					<p>Visual communication and problem-solving</p>
-				  </div>
-				  <a href="#">more</a>
-				  <div class="ico-card">
-				  <i class="fa fa-rebel"></i>
-				</div>
-				</div>
-			  </div>
-		</div>
-		
-    </section> -->
-  <!-- End related-product Area -->
-
   <!-- start footer Area -->
   <footer class="footer-area section_gap">
     <div class="container">
@@ -2868,33 +2801,33 @@
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="single-footer-widget">
             <h6>Giới thiệu</h6>
-            <a href="https://bachlongmobile.monamedia.net/gioi-thieu-ve-bachlong-mobile">
-              <p>Giới thiệu bạch long mobile</p>
+            <a class="introduct" href="https://bachlongmobile.monamedia.net/gioi-thieu-ve-bachlong-mobile">
+              <p >Giới thiệu bạch long mobile</p>
             </a>
-            <a href="https://bachlongcare.com/gioi-thieu">
-              <p>Giới thiệu bạch long care</p>
+            <a class="introduct" href="https://bachlongcare.com/gioi-thieu">
+              <p >Giới thiệu bạch long care</p>
             </a>
-            <a href="https://bachlongmobile.monamedia.net/huong-dan-mua-hang-online">
-              <p>Hướng dẫn mua hàng</p>
+            <a class="introduct" href="https://bachlongmobile.monamedia.net/huong-dan-mua-hang-online">
+              <p >Hướng dẫn mua hàng</p>
             </a>
-            <a href="https://bachlongmobile.monamedia.net/quy-trinh-giao-hang">
-              <p>Quy trình giao hàng</p>
+            <a class="introduct" href="https://bachlongmobile.monamedia.net/quy-trinh-giao-hang">
+              <p >Quy trình giao hàng</p>
             </a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="single-footer-widget">
             <h6>Thông tin liên hệ</h6>
-            <a href="#">
+            <a class="contact" href="#">
               <p>Mua hàng: 1900.63.64.69 ( 8h00 - 21h30 )</p>
             </a>
-            <a href="#">
+            <a class="contact" href="#">
               <p>Bảo hành: 1900.63.69.81 ( 9h00 - 18h30 )</p>
             </a>
-            <a href="#">
+            <a class="contact" href="#">
               <p>Khiếu nại: 0938.038.038</p>
             </a>
-            <a href="#">
+            <a class="contact" href="#">
               <p>Hợp tác kinh doanh: 0938.038.038</p>
             </a>
           </div>
@@ -2909,9 +2842,9 @@
             </div>
             <h6>Website Thành Viên</h6>
             <div class="footer-social d-flex align-items-center" style="flex-direction: row; gap: 10px">
-              <a href="#"><img style="width: 100px; border: 50%" src="img/elements/image-1.png" alt="" /></a>
-              <a href="#"><img style="width: 100px" src="img/elements/image-2.png" alt="" /></a>
-              <a href="#"><img style="width: 100px" src="img/elements/image-3.png" alt="" /></a>
+              <a class="logo" href="#"><img style="width: 100px; border-radius:.9rem" src="img/elements/image-1.png" alt="" /></a>
+              <a class="logo" href="#"><img style="width: 100px; border-radius:.9rem" src="img/elements/image-2.png" alt="" /></a>
+              <a class="logo" href="#"><img style="width: 100px; border-radius:.9rem" src="img/elements/image-3.png" alt="" /></a>
             </div>
           </div>
         </div>
