@@ -8919,19 +8919,63 @@ label {
 /* ---------------multi banner ---------------*/
 .wide-container {
   display: flex;
-  justify-content: space-around ;
-  margin-bottom:20px
-
+  margin-bottom:40px;
+  justify-content: center;
+  gap: 15px;
 }
-.small {
+
+/*------------------- Shine ----------------------*/
+.glass-shine-effect {
   margin-right: 10px;
   margin-left: 10px;
-  width: 25%;
-  float: left;
- 
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:80%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 200ms ease;
+  overflow: hidden;
 }
-.small img {
+.glass-shine-effect:before {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 50px;
+  transform: rotate(30deg);
+  background-color: rgba(255, 255, 255, 0.2);
+  left: -100px;
+}
+.glass-shine-effect:hover {
+  transform: scale(1.1);
+}
+.glass-shine-effect:hover:before {
+  transition: left 500ms ease;
+  left: 120%;
+}
+.glass-shine-effect img {
   width: 100%;
   height: auto;
 
+}
+/* ----------------- slide banner ----------------------- */
+/* Ẩn slide trên desktop */
+@media (min-width: 768px) {
+  #mobileCarousel {
+    display: none;
+  }
+}
+
+/* Ẩn các banner gốc khi trên mobile */
+@media (max-width: 767px) {
+  .wide-container {
+    display: none;
+  }
 }

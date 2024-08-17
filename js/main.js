@@ -589,4 +589,9 @@ $(document).ready(function () {
       }
       clickEvent = false;
     });
+    $('#mobileCarousel').carousel({
+      interval: 2000, // thời gian giữa các slide
+      ride: 'carousel'
+    });
 });
+
