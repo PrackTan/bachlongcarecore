@@ -595,3 +595,15 @@ $(document).ready(function () {
     });
 });
 
+// ---------------------------------------SEARCH BAR-------------------//
+document.getElementById('search-box').addEventListener('focus', function() {
+  // Khi người dùng nhấp vào hộp tìm kiếm, hiển thị bảng sản phẩm/từ khóa hot
+  document.getElementById('suggestions').style.display = 'block';
+});
+
+document.addEventListener('click', function(event) {
+  // Đóng bảng gợi ý khi người dùng nhấp ra ngoài
+  if (!event.target.closest('.search-container')) {
+      document.getElementById('suggestions').style.display = 'none';
+  }
+});
