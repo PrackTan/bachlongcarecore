@@ -203,51 +203,51 @@ $(document).ready(function () {
     $("#mc_embed_signup").find("form").ajaxChimp();
   });
 
-  if (document.getElementById("js-countdown")) {
-    var countdown = new Date("October 17, 2018");
+  // if (document.getElementById("js-countdown")) {
+  //   var countdown = new Date("October 17, 2018");
 
-    function getRemainingTime(endtime) {
-      var milliseconds = Date.parse(endtime) - Date.parse(new Date());
-      var seconds = Math.floor((milliseconds / 1000) % 60);
-      var minutes = Math.floor((milliseconds / 1000 / 60) % 60);
-      var hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
-      var days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+  //   function getRemainingTime(endtime) {
+  //     var milliseconds = Date.parse(endtime) - Date.parse(new Date());
+  //     var seconds = Math.floor((milliseconds / 1000) % 60);
+  //     var minutes = Math.floor((milliseconds / 1000 / 60) % 60);
+  //     var hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
+  //     var days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
 
-      return {
-        total: milliseconds,
-        seconds: seconds,
-        minutes: minutes,
-        hours: hours,
-        days: days,
-      };
-    }
+  //     return {
+  //       total: milliseconds,
+  //       seconds: seconds,
+  //       minutes: minutes,
+  //       hours: hours,
+  //       days: days,
+  //     };
+  //   }
 
-    function initClock(id, endtime) {
-      var counter = document.getElementById(id);
-      var daysItem = counter.querySelector(".js-countdown-days");
-      var hoursItem = counter.querySelector(".js-countdown-hours");
-      var minutesItem = counter.querySelector(".js-countdown-minutes");
-      var secondsItem = counter.querySelector(".js-countdown-seconds");
+  //   function initClock(id, endtime) {
+  //     var counter = document.getElementById(id);
+  //     var daysItem = counter.querySelector(".js-countdown-days");
+  //     var hoursItem = counter.querySelector(".js-countdown-hours");
+  //     var minutesItem = counter.querySelector(".js-countdown-minutes");
+  //     var secondsItem = counter.querySelector(".js-countdown-seconds");
 
-      function updateClock() {
-        var time = getRemainingTime(endtime);
+  //     function updateClock() {
+  //       var time = getRemainingTime(endtime);
 
-        daysItem.innerHTML = time.days;
-        hoursItem.innerHTML = ("0" + time.hours).slice(-2);
-        minutesItem.innerHTML = ("0" + time.minutes).slice(-2);
-        secondsItem.innerHTML = ("0" + time.seconds).slice(-2);
+  //       daysItem.innerHTML = time.days;
+  //       hoursItem.innerHTML = ("0" + time.hours).slice(-2);
+  //       minutesItem.innerHTML = ("0" + time.minutes).slice(-2);
+  //       secondsItem.innerHTML = ("0" + time.seconds).slice(-2);
 
-        if (time.total <= 0) {
-          clearInterval(timeinterval);
-        }
-      }
+  //       if (time.total <= 0) {
+  //         clearInterval(timeinterval);
+  //       }
+  //     }
 
-      updateClock();
-      var timeinterval = setInterval(updateClock, 1000);
-    }
+  //     updateClock();
+  //     var timeinterval = setInterval(updateClock, 1000);
+  //   }
 
-    initClock("js-countdown", countdown);
-  }
+  //   initClock("js-countdown", countdown);
+  // }
 
   $(".quick-view-carousel-details").owlCarousel({
     loop: true,
@@ -589,21 +589,75 @@ $(document).ready(function () {
       }
       clickEvent = false;
     });
-    $('#mobileCarousel').carousel({
-      interval: 2000, // thời gian giữa các slide
-      ride: 'carousel'
-    });
+  $("#mobileCarousel").carousel({
+    interval: 2000, // thời gian giữa các slide
+    ride: "carousel",
+  });
+  // ---------------------------------------SEARCH BAR-------------------//
+  document.getElementById("search-box").addEventListener("focus", function () {
+    // Khi người dùng nhấp vào hộp tìm kiếm, hiển thị bảng sản phẩm/từ khóa hot
+    document.getElementById("suggestions").style.display = "block";
+  });
+
+  document.addEventListener("click", function (event) {
+    // Đóng bảng gợi ý khi người dùng nhấp ra ngoài
+    if (!event.target.closest(".search-container")) {
+      document.getElementById("suggestions").style.display = "none";
+    }
+  });
+  // ---------------------------------------------------- FLASH SALE -----------------------///
+  // Countdown timer logic
+  const countdown = () => {
+    let now = new Date().getTime();
+    let eventDate = new Date("Aug 31, 2024 23:59:59").getTime(); // Cập nhật thời gian kết thúc sale
+    let timeLeft = eventDate - now;
+
+    let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    $("#days").text(`${days}d`);
+    $("#hours").text(`${hours}h`);
+    $("#minutes").text(` ${minutes}m`);
+    $("#seconds").text(`${seconds}s`);
+    
+    if (timeLeft < 0) {
+        clearInterval(countdownTimer);
+        $("#timer").text("EXPIRED");
+    }
+};
+
+let countdownTimer = setInterval(countdown, 1000);
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
 });
 
-// ---------------------------------------SEARCH BAR-------------------//
-document.getElementById('search-box').addEventListener('focus', function() {
-  // Khi người dùng nhấp vào hộp tìm kiếm, hiển thị bảng sản phẩm/từ khóa hot
-  document.getElementById('suggestions').style.display = 'block';
-});
-
-document.addEventListener('click', function(event) {
-  // Đóng bảng gợi ý khi người dùng nhấp ra ngoài
-  if (!event.target.closest('.search-container')) {
-      document.getElementById('suggestions').style.display = 'none';
-  }
 });

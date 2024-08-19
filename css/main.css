@@ -9048,6 +9048,7 @@ label {
 .suggestions-list .hot-keywords li {
   display: flex;
   align-items: center;
+  margin-top: 10px;
   padding: 5px 0;
   cursor: pointer;
 }
@@ -9061,4 +9062,69 @@ label {
 
 .suggestions-list .hot-keywords li:hover {
   background-color: #f1f1f1;
+}
+
+/* ----------------FLASH SALE--------------------- */
+.container-flash-sale{
+  background-color: #003C77;
+}
+.flash-sale-header{
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap:20px;
+}
+@media (max-width: 767px) {
+  .container-flash-sale .flash-sale-header div.line2 .text2{
+    display: flex ;
+    flex-direction: column;
+    gap:20px
+  }
+}
+.flash-sale-header .flash-sale-span{
+  font-size: 20px;
+  color: #febe10;
+}
+.flash-sale-header  span.flash-sale-time{
+  background-color: rgba(255, 255, 255, 0.3);
+  padding:20px;
+  width: 20px;
+  height: 20px;
+}
+.product-card {
+  background-color: white;
+  border: 1px solid #febe10;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-bottom: 2px solid #FF5656;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-title {
+  font-weight: bold;
+  color: #FF5656;
+}
+
+.price {
+  color: #003C77;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.discount {
+  color: #FF5656;
+  font-size: 0.9em;
 }
