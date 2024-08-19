@@ -9067,6 +9067,7 @@ label {
 /* ----------------FLASH SALE--------------------- */
 .container-flash-sale{
   background-color: #003C77;
+  margin-bottom: 20px;
 }
 .flash-sale-header{
   height: 100px;
