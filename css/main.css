@@ -1392,7 +1392,7 @@ h6 {
 .header_area .main_menu .main_box {
   background: #003c78;
   margin: 0px auto 0;
-  max-width: 1200px;
+  max-width: 1140px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -8918,6 +8918,8 @@ label {
 
 /* ---------------multi banner ---------------*/
 .wide-container {
+  margin-right: 100px;
+  margin-left: 100px;
   display: flex;
   margin-bottom:40px;
   justify-content: center;
