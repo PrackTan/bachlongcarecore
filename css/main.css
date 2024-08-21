@@ -9068,8 +9068,18 @@ label {
 
 /* ----------------FLASH SALE--------------------- */
 .container-flash-sale{
+  margin-left: 100px;
+  margin-right: 100px;
   background-color: #003C77;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .container-flash-sale{
+    margin-left: 0;
+  margin-right: 0;
+  background-color: #003C77;
+  margin-bottom: 20px;
+  }
 }
 .flash-sale-header{
   height: 100px;
@@ -9086,6 +9096,11 @@ label {
     display: flex ;
     flex-direction: column;
     gap:20px
+  }
+}
+@media (max-width: 767px) {
+  .container-flash-sale .flash-sale-header div.line2 .text2 span{
+    width: max-content;
   }
 }
 .flash-sale-header .flash-sale-span{
