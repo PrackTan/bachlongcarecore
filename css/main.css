@@ -9084,12 +9084,12 @@ label {
   margin-bottom: 20px;
   }
 }
-/* @media (min-width: 2560px) and (min-height: 1440px) {
+@media (min-width: 2560px) and (min-height: 1440px) {
   .container-flash-sale{
     margin-left: 200px;
   margin-right: 200px;
   }
-} */
+}
 .flash-sale-header{
   height: 100px;
   color: white;
