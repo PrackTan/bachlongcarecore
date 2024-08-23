@@ -1390,7 +1390,7 @@ h6 {
 }
 
 .header_area .main_menu .main_box {
-  background: #003c78;
+  background: #fff;
   margin: 0px auto 0;
   max-width: 1140px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1449,10 +1449,13 @@ h6 {
 .header_area .navbar .nav .nav-item .nav-link:after {
   display: none;
 }
-
+.header_area .navbar .nav .nav-item .nav-link{
+  font-weight: bold;
+  color: #000;
+}
 .header_area .navbar .nav .nav-item:hover .nav-link,
 .header_area .navbar .nav .nav-item.active .nav-link {
-  color: #ffba00;
+  color: #ea1f27;
 }
 
 .header_area .navbar .nav .nav-item.submenu {
@@ -1472,7 +1475,7 @@ h6 {
   .header_area .navbar .nav .nav-item.submenu ul {
     position: absolute;
     top: 140%;
-    left: 0px;
+    left: -50px;
     min-width: 200px;
     text-align: left;
     opacity: 0;
@@ -8637,7 +8640,7 @@ label {
 
 #myCarousel .carousel-item>img {
   max-width: 100%;
-  min-height: 270px;
+  min-height: 260px;
   margin-top: 47px;
 }
 
@@ -9145,4 +9148,11 @@ label {
 .discount {
   color: #FF5656;
   font-size: 0.9em;
+}
+
+/* ---------------------- LOGO BLC -------------------- */
+@media (max-width: 767px) { /* Media query cho màn hình có chiều rộng nhỏ hơn hoặc bằng 767px (mobile) */
+  .navbar-brand.logo_h {
+    font-size: 12px; /* Kích thước chữ trên màn hình mobile */
+  }
 }
