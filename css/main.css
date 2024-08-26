@@ -8728,7 +8728,7 @@ label {
 .sidebar {
   line-height: 23px;
   margin-top: 40px;
-  background-color: #f8f9fa;
+  background-color: #003C77;
   border: 1px solid #ddd;
   box-shadow: inset #000;
 }
@@ -8744,7 +8744,7 @@ label {
 }
 
 .sidebar ul li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -8928,7 +8928,14 @@ label {
   justify-content: center;
   gap: 15px;
 }
-
+@media (min-width: 1440px) {
+  .wide-container {
+    margin-left: 340px;
+    margin-right: 340px;
+    font-size: 24px; /* tăng kích thước chữ */
+    padding: 30px; /* tăng padding */
+  }
+}
 /*------------------- Shine ----------------------*/
 .glass-shine-effect {
   margin-right: 10px;
@@ -9072,7 +9079,8 @@ label {
 /* ----------------FLASH SALE--------------------- */
 .container-flash-sale{
   margin-left: 100px;
-  margin-right: 100px;
+    margin-right: 100px;
+    max-width: 100%;
   background-color: #003C77;
   margin-bottom: 20px;
 }
@@ -9084,12 +9092,26 @@ label {
   margin-bottom: 20px;
   }
 }
-@media (min-width: 2560px) and (min-height: 1440px) {
-  .container-flash-sale{
-    margin-left: 200px;
-  margin-right: 200px;
+@media (max-width: 1024px) {
+  .flash-sale {
+    font-size: 16px; /* giảm kích thước chữ */
+    padding: 15px; /* giảm padding */
   }
 }
+
+/* Media query cho màn hình lớn hơn, như desktop 1440 */
+@media (min-width: 1440px) {
+  .container-flash-sale {
+    margin-left: 380px;
+    margin-right: 380px;
+  }
+}
+/* @media (max-width: 2560px) {
+  .container-flash-sale{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+} */
 .flash-sale-header{
   height: 100px;
   color: white;
@@ -9162,3 +9184,35 @@ label {
     font-size: 12px; /* Kích thước chữ trên màn hình mobile */
   }
 }
+
+/* ------------------------ style product detail------------------------------- */
+/* .carousel-inner img {
+  width: 100%
+}
+
+.carousel-item img {
+  width: 320px;
+  height: 240px !important
+}
+
+#myCarousel .carousel-indicators {
+  position: static;
+  margin-top: 0px
+}
+
+#myCarousel .carousel-indicators>li {
+  width: 100px
+}
+
+#myCarousel .carousel-indicators li img {
+  display: block;
+  opacity: 0.5
+}
+
+#myCarousel .carousel-indicators li.active img {
+  opacity: 1
+}
+
+#myCarousel .carousel-indicators li:hover img {
+  opacity: 0.75
+} */

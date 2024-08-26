@@ -613,7 +613,9 @@ $(document).ready(function () {
     let timeLeft = eventDate - now;
 
     let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let hours = Math.floor(
+      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
@@ -621,43 +623,44 @@ $(document).ready(function () {
     $("#hours").text(`${hours}h`);
     $("#minutes").text(` ${minutes}m`);
     $("#seconds").text(`${seconds}s`);
-    
-    if (timeLeft < 0) {
-        clearInterval(countdownTimer);
-        $("#timer").text("EXPIRED");
-    }
-};
 
-let countdownTimer = setInterval(countdown, 1000);
-const swiper = new Swiper('.swiper', {
+    if (timeLeft < 0) {
+      clearInterval(countdownTimer);
+      $("#timer").text("EXPIRED");
+    }
+  };
+
+  let countdownTimer = setInterval(countdown, 1000);
+  const swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+      delay: 3000,
+      disableOnInteraction: false,
     },
     breakpoints: {
       // when window width is >= 320px
       320: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 20,
       },
       // when window width is >= 480px
       480: {
         slidesPerView: 3,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       // when window width is >= 640px
       640: {
         slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-});
+        spaceBetween: 40,
+      },
+    },
+  });
+  //-------------------------detail product---------------------//
 
 });
