@@ -9039,8 +9039,8 @@ label {
 /* ----------------FLASH SALE--------------------- */
 .container-flash-sale{
   margin-left: 100px;
-    margin-right: 100px;
-    max-width: 100%;
+  margin-right: 100px;
+  max-width: 100%;
   background-color: #003C77;
   margin-bottom: 20px;
 }
@@ -9060,12 +9060,12 @@ label {
 }
 
 /* Media query cho màn hình lớn hơn, như desktop 1440 */
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .container-flash-sale {
     margin-left: 380px;
     margin-right: 380px;
   }
-}
+} */
 @media (min-width: 2560px) {
   .container-flash-sale {
     margin-left: 380px;
@@ -9151,7 +9151,7 @@ label {
   }
 }
 
-/* ------------------------ style product detail------------------------------- */
+/* -----------------------------------style product detail------------------------------- */
 /* .carousel-inner img {
   width: 100%
 }
