@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách dịch vụ</title>
+    <style>
+        /* CSS cho danh sách dịch vụ */
+        #service-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #service-list li {
+            padding: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #service-list li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        /* Hiệu ứng hover */
+        #service-list li:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        #service-list li a:hover {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <ul id="service-list">
+        <!-- Danh sách sẽ được render tại đây -->
+    </ul>
+
+    <script>
+        // URL của API
+        const apiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=Q20_Hg4MPI27XqxXWYrIe-Bk5DDi-ciGi6CKHn9TFSesG5-7yPbtWVoTXBwzjBgtfLYxCEW10GRLwnNbF1ys9m05tPg1e-Mgm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnN23KPOIb5b0N-u3ifv2rEecXHNeoJXC90QBWa8aNXIz4QgWjC6YXFSacHKavaV7mmFzLR2_XReF9ALt7GXRfR9OqP8XtnKFRtz9Jw9Md8uu&lib=MVjax9o-m4TQtuhh72AJto408VT6LADiD";
+
+        // Hàm lấy dữ liệu từ API và render vào HTML
+        async function fetchAndRenderServices() {
+            try {
+                // Gọi API bằng fetch
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Lấy phần tử ul từ DOM
+                const serviceList = document.getElementById('service-list');
+
+                // Duyệt qua dữ liệu và tạo các thẻ li tương ứng
+                data.forEach(service => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = "#"; // Bạn có thể thay đổi link nếu cần
+                    link.textContent = service["Model máy"]; // Tên dịch vụ từ dữ liệu API
+                    
+
+                    // Thêm link vào list item
+                    listItem.appendChild(link);
+
+                    // Thêm list item vào ul
+                    serviceList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error("Lỗi khi lấy dữ liệu từ API: ", error);
+            }
+        }
+
+        // Gọi hàm fetchAndRenderServices khi trang được load
+        window.onload = fetchAndRenderServices;
+    </script>
+</body>
+</html>
