@@ -9152,36 +9152,39 @@ label {
 }
 
 /* -----------------------------------style product detail------------------------------- */
-/* .carousel-inner img {
+/*  */
+.slide-productdetail img {
   width: 100%
 }
 
-.carousel-item img {
+.slide-productdetail_item img {
   width: 320px;
   height: 240px !important
 }
 
-#myCarousel .carousel-indicators {
+.myProductDetail .carousel-indicators {
   position: static;
   margin-top: 0px
 }
 
-#myCarousel .carousel-indicators>li {
+.myProductDetail .carousel-indicators>li {
   width: 100px
 }
 
-#myCarousel .carousel-indicators li img {
+.myProductDetail .carousel-indicators li img {
   display: block;
-  opacity: 0.5
+  opacity: 0.5;
+  width: 50px;
+  border: 1px solid;
 }
 
-#myCarousel .carousel-indicators li.active img {
+.myProductDetail .carousel-indicators li.active img {
   opacity: 1
 }
 
-#myCarousel .carousel-indicators li:hover img {
+.myProductDetail .carousel-indicators li:hover img {
   opacity: 0.75
-} */
+}
 
 /* ------------- pridce product detail -------------- */
 .s_product_text  h3{
