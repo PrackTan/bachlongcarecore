@@ -896,7 +896,7 @@ $(document).ready(function () {
       // $('.s_product_text').html(buttonContainer);
       // Thiết lập giá ban đầu khi hiển thị sản phẩm lần đầu
       // renderPrice('pisenDLChuan', productDetails);
-      renderPrice('Pisen', productDetails);
+      renderPrice('Pisen DL Chuẩn', productDetails);
       // Thêm sự kiện click cho các nút pin để cập nhật giá
       $('.pin-button').click(function() {
         const pinType = $(this).data('pin');
