@@ -662,5 +662,242 @@ $(document).ready(function () {
     },
   });
   //-------------------------detail product---------------------//
+//   const urlParams = new URLSearchParams(window.location.search);
+//   console.log("check param", urlParams);
+//   const productId = urlParams.get("id");
+//   console.log("check param", productId);
+
+//   // URL của API (thay thế YOUR_API_URL bằng URL của API bạn đã triển khai)
+//   const apiUrl = `https://script.google.com/macros/s/AKfycbzTfOc66Fgy3ov5q4uJOX4pleuSyDUuYLznrSiRwB2JKjXXrYDajkodcQtmSJ8wmpZNKw/exec?id=${productId}`;
+
+//   // Hàm fetch dữ liệu từ API
+//   async function fetchProductDetails() {
+//     try {
+//       const response = await fetch(apiUrl);
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok " + response.statusText);
+//       }
+//       const productDetails = await response.json();
+
+//       // Hiển thị chi tiết sản phẩm
+//       displayProductDetails(productDetails);
+//     } catch (error) {
+//       console.error("Fetch error:", error);
+//       $("productDetails").innerText =
+//         "Có lỗi xảy ra khi lấy dữ liệu sản phẩm.";
+//     }
+//   }
+//   function renderPrice(pinType) {
+//     const price = productDetails[pinType];
+//     $(`.price`).html (`${price}.000đ`);
+//     $(`.productTitle`).html (`THAY PIN ${pinType.toUpperCase()} CHO ${productDetails.model}`);
+// }
+
+//   // Hàm hiển thị chi tiết sản phẩm
+//   function displayProductDetails(productDetails) {
+  
+//     if (productDetails.error) {
+//       console.log("error")
+//       $('.s_product_text').text(details.error);
+//     } else {
+//       console.log($('.s_product_text'));
+//       $('.s_product_text').html(` <h3 class="productTitle">THAY PIN PISEN CHÍNH HÃNG IPHONE 11 PRO MAX</h3>
+// 						<div>
+// 							   <button class="btn btn-warning text" onclick="renderPrice('pisenDLChuan')">Pisen DL Chuẩn</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('pisenDLCao')">Pisen DL Cao</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('pisenDLSieuCao')">Pisen DL Siêu Cao</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('orizin')">Orizin</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('eu')">EU</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('zinChinhHang')">Zin Chính Hãng</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('pinABC')">Pin ABC</button>
+//                   <button class="btn btn-warning text" onclick="renderPrice('pinXYC')">Pin XYC</button>
+// 						</div>
+// 						<div class="">
+// 							<span class="price"color: black;">${productDetails.pisenDLChuan}.000đ</span>
+// 							<span class="cost" style="color: gray;">1.960.000đ</span>
+// 							<span class="sale-off"> Giảm 50%</span>
+// 						</div>
+// 						<ul class="list">
+// 							<li>
+// 								<a href="#">
+// 									<span>Thời gian bảo hành : </span>
+// 									<span class="making-time">12 tháng</span>
+// 								</a>
+// 							</li>
+// 							<li>
+// 								<a href="#">
+// 									<span>Thời gian sữa chữa :</span>
+// 									<span class="making-time">15 - 30 phút</span>
+// 								</a>
+// 							</li>
+// 							<li>
+// 								<div><img alt="123" style="width: 100%; border-radius: .8rem;" src="img/BANNER-LAPTOP-BOTTOM-HOME-T8-1200-010824.png"/></div>
+// 							</li>
+// 							<li>
+// 								<div style="border: 1px solid #ff6c00; padding:10px;background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);border-radius: .8rem; color: #fff;">
+// 									<h3 style="background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%); padding:10px;border-radius: .8rem;color: white;">Tiện ích khuyến mãi</h3>
+// 									<div > 
+// 										<span><i style="color: red;" class="fa fa-bookmark-o"></i> Thay pin pisen tặng dán màn hình và bộ cáp sạc</span>
+// 										<br/>
+// 										<span><i style="color: red;" class="fa fa-bookmark-o"></i> Vệ sinh máy miễn phí</span>
+// 									</div>
+// 								</div>
+// 							</li>
+// 						</ul>
+// 						<p>
+// 							<span><b>Điều kiện bảo hành</b> : Pin hoạt động không ổn định như phần trăm pin báo ảo khi sử dụng , máy nóng bất thường khi sạc pin , máy tự động sụp nguồn khởi động liên tục . Pin còn nguyên vẹn không bị rách , phù , lủng , gãy chấu , đứt dây.</span>
+// 							<br/>
+// 							<span> <b>Không bảo hành</b> : khi tem dán linh kiện sửa chửa bị rách biến dạng , mất tem , máy bị rơi rớt – vô nước , can thiệp bởi bên thứ 3</span>
+// 						<p>
+						
+// 						<div class="product_count">
+// 							<label for="qty">Quantity:</label>
+// 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+// 								class="input-text qty">
+// 							<button
+// 								onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+// 								class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+// 							<button
+// 								onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+// 								class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+// 						</div>
+// 						<div class="card_area d-flex align-items-center">
+// 							<a class="primary-btn" href="#">Đặt lịch sửa chửa</a>
+// 						</div>`)
+//     }
+//   }
+
+//   // Gọi hàm fetchProductDetails khi tải trang
+//   fetchProductDetails();
+//   renderPrice('pisenDLChuan');
+
+$(document).ready(function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
+
+  // URL của API
+  const apiUrl = `https://script.google.com/macros/s/AKfycby_qwIAXkWAtNT9CmhVBHNEJ1R8Q_qEvrym7QNKTNRDxkD7sqeIoGVXvhB_JPEpIG7XNg/exec?id=${productId}`;
+  // const apiUrl = `https://script.google.com/macros/s/AKfycbzTfOc66Fgy3ov5q4uJOX4pleuSyDUuYLznrSiRwB2JKjXXrYDajkodcQtmSJ8wmpZNKw/exec?id=${productId}`;
+  // Hàm fetch dữ liệu từ API
+  async function fetchProductDetails() {
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      const productDetails = await response.json();
+      console.log("check product details",productDetails);
+      // Hiển thị chi tiết sản phẩm
+      displayProductDetails(productDetails);
+    } catch (error) {
+      console.error("Fetch error:", error);
+      $("#productDetails").text("Có lỗi xảy ra khi lấy dữ liệu sản phẩm.");
+    }
+  }
+
+  // Hàm render giá khi nhấp vào loại pin
+  function renderPrice(pinType, productDetails) {
+    console.log("checl prductdetail in renderPrice", productDetails);
+    const price = productDetails[pinType];
+    console.log("check price",price);
+    $(".price").html(`${price}.000đ`);
+    $(".productTitle").html(`THAY PIN ${pinType.toUpperCase()} CHO ${productDetails.Model}`);
+
+  }
+
+  // Hàm hiển thị chi tiết sản phẩm
+  function displayProductDetails(productDetails) {
+    if (productDetails.error) {
+      $('.s_product_text').text(productDetails.error);
+    } else {
+      $('.s_product_text').html(`
+        <h3 class="productTitle">THAY PIN PISEN CHÍNH HÃNG IPHONE 11 PRO MAX</h3>
+        <div class="button-type">
+          
+
+        </div>
+        <div class="">
+          <span class="price" style="color: black;">${productDetails.pisenDLChuan}.000đ</span>
+          <span class="cost" style="color: gray;">1.960.000đ</span>
+          <span class="sale-off"> Giảm 50%</span>
+        </div>
+        <ul class="list">
+          <li>
+            <a href="#">
+              <span>Thời gian bảo hành : </span>
+              <span class="making-time">12 tháng</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Thời gian sữa chữa :</span>
+              <span class="making-time">15 - 30 phút</span>
+            </a>
+          </li>
+          <li>
+            <div><img alt="123" style="width: 100%; border-radius: .8rem;" src="img/BANNER-LAPTOP-BOTTOM-HOME-T8-1200-010824.png"/></div>
+          </li>
+          <li>
+            <div style="border: 1px solid #ff6c00; padding:10px;background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);border-radius: .8rem; color: #fff;">
+              <h3 style="background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%); padding:10px;border-radius: .8rem;color: white;">Tiện ích khuyến mãi</h3>
+              <div> 
+                <span><i style="color: red;" class="fa fa-bookmark-o"></i> Thay pin pisen tặng dán màn hình và bộ cáp sạc</span>
+                <br/>
+                <span><i style="color: red;" class="fa fa-bookmark-o"></i> Vệ sinh máy miễn phí</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <p>
+          <span><b>Điều kiện bảo hành</b> : Pin hoạt động không ổn định như phần trăm pin báo ảo khi sử dụng , máy nóng bất thường khi sạc pin , máy tự động sụp nguồn khởi động liên tục . Pin còn nguyên vẹn không bị rách , phù , lủng , gãy chấu , đứt dây.</span>
+          <br/>
+          <span> <b>Không bảo hành</b> : khi tem dán linh kiện sửa chữa bị rách biến dạng , mất tem , máy bị rơi rớt – vô nước , can thiệp bởi bên thứ 3</span>
+        <p>
+        <div class="product_count">
+          <label for="qty">Quantity:</label>
+          <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+          <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+          <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+        </div>
+        <div class="card_area d-flex align-items-center">
+          <a class="primary-btn" href="#">Đặt lịch sửa chữa</a>
+        </div>
+      `);
+      let buttonContainer = $('.button-type');
+      console.log(buttonContainer);
+      for (let key in productDetails) {
+        if (key !== "id" && key !== "Model") { // Loại bỏ các trường không phải là loại pin
+          let button = $('<button></button>')
+            .addClass('btn btn-warning text pin-button')
+            .attr('data-pin', key)
+            .attr('data-price', productDetails[key])
+            .text(key);
+
+          // Thêm sự kiện click cho mỗi button
+          button.click(function() {
+            renderPrice(key, productDetails[key]);
+          });
+
+          buttonContainer.append(button);
+        }
+      }
+
+      // $('.s_product_text').html(buttonContainer);
+      // Thiết lập giá ban đầu khi hiển thị sản phẩm lần đầu
+      // renderPrice('pisenDLChuan', productDetails);
+      renderPrice('Pisen', productDetails);
+      // Thêm sự kiện click cho các nút pin để cập nhật giá
+      $('.pin-button').click(function() {
+        const pinType = $(this).data('pin');
+        renderPrice(pinType, productDetails);
+      });
+    }
+  }
+
+  // Gọi hàm fetchProductDetails khi tải trang
+  fetchProductDetails();
+});
+
 
 });

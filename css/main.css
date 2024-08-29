@@ -9190,6 +9190,10 @@ label {
 .s_product_text  h3{
   color:#003c78;
 }
+.s_product_text.button__typepin button{
+  margin-top:10px;
+  margin-right:10px;
+}
 .s_product_text div{
   margin-bottom:20px
 }
