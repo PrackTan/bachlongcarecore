@@ -9193,6 +9193,7 @@ label {
 .s_product_text.button__typepin button{
   margin-top:10px;
   margin-right:10px;
+  width: 200px;
 }
 .s_product_text div{
   margin-bottom:20px

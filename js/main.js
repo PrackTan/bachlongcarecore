@@ -772,9 +772,19 @@ $(document).ready(function () {
 //   renderPrice('pisenDLChuan');
 
 $(document).ready(function () {
+ 
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("id");
-
+  const keyMapping = {
+    "Pisen": "Pisen DL Chuẩn",
+    "PisenCao": "Pisen DL Cao",
+    "PisenSieuCao": "Pisen DL Siêu Cao",
+    "Orizin": "Orizin",
+    "EU": "EU",
+    "Zin": "Zin Chính Hãng",
+    "Pinabc": "Pin ABC",
+    "Pininner": "Pin XYC"
+  };
   // URL của API
   const apiUrl = `https://script.google.com/macros/s/AKfycby_qwIAXkWAtNT9CmhVBHNEJ1R8Q_qEvrym7QNKTNRDxkD7sqeIoGVXvhB_JPEpIG7XNg/exec?id=${productId}`;
   // const apiUrl = `https://script.google.com/macros/s/AKfycbzTfOc66Fgy3ov5q4uJOX4pleuSyDUuYLznrSiRwB2JKjXXrYDajkodcQtmSJ8wmpZNKw/exec?id=${productId}`;
